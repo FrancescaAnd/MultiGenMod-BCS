@@ -4,10 +4,9 @@
 1. [About the project](#1-about-the-project)
 2. [Experiment results](#2-experiment-results)
 3. [How to use](#3-how-to-use)
-4. [i like your mustache] 
 
 ## 1. About the project
-This project dfghjklò weqferfqf aims to develop multi-view, multimodal generative models that integrate mammography and radiomic features for improved breast cancer classification, explainability, and diagnostic support.
+This project aims to develop multi-view, multimodal generative models that integrate mammography and radiomic features for improved breast cancer classification, explainability, and diagnostic support.
 
 | Stage                | Model              | Input                              | Output                                |
 |----------------------|--------------------|------------------------------------|--------------------------------------|
