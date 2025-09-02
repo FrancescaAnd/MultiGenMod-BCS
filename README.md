@@ -41,6 +41,12 @@ As first step, please install the dependencies needed for running the system.
 ```shell
 pip install -r requirements.txt
 ```
+Otherwise, you can use the YAML file for regenerating the used environment, stored in the repository.
+
+```shell
+conda env create -f environment.yml
+conda activate mammogan
+```
 ### Reproducibility instructions
 
 Two options are available:
