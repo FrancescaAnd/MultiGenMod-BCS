@@ -1,19 +1,23 @@
-# Multimodal Generative Models for Breast Cancer Screening
+# Multi-view Generative Models for Breast Cancer Screening
 
 ## Table of Contents
 1. [About the project](#1-about-the-project)
-2. [Experiment results](#2-experiment-results)
-3. [How to use](#3-how-to-use)
+2. [How to use](#2-how-to-use)
 
 ## 1. About the project
-This project aims to develop multi-view, multimodal generative models that integrate mammography and radiomic features for improved breast cancer classification, explainability, and diagnostic support.
+The aim of the following project is to develop and evaluate a **multi‑view generative model for mammography** to synthesize coherent craniocaudal (CC) and mediolateral oblique (MLO) mammogram views, ensuring cross-view consistency, preservation of lesions and potential improvement in data augmentation and downstream classification tasks.
 
-| Stage                | Model              | Input                              | Output                                |
-|----------------------|--------------------|------------------------------------|--------------------------------------|
-| Mass Detection       | YOLOv8             | PNG Images                         | Bounding Boxes                       |
-| Instance Segmentation| YOLOv8-Seg         | PNG + Contour-based masks          | Pixel-level masks                    |
-| Classification       | ResNet (2-channels)| PNG + Segmentation Mask + BIRADS   | Benign/Malignant classification      |
-| Super-Resolution     | ESRGAN             | LR-HR Image Pairs                  | High-Resolution Enhanced Mammograms  |
+The project explores **multi-view generative models for mammography**, with a focus on:
+- Using **2-view (CC/MLO)** data from **INbreast** and **CBIS-DDSM**.  
+- Training **GANs** to generate realistic mammograms (trying **diffusion models** for future improvements).  
+- Ensuring **cross-view consistency** and exploring **lesion-conditioned generation**.  
+- Supporting **data augmentation** and **explainability** in breast cancer screening.
+
+| Stage                          | Model                     | Input                                              | Output                                           |
+|--------------------------------|---------------------------|--------------------------------------------------|-------------------------------------------------|
+| Multi-View Mammogram Generation | GAN                      | Single-view mammogram (CC or MLO) + Radiomic features | Synthetic additional view(s) (e.g., generate MLO from CC) |
+| Radiomics-Conditioned Synthesis | Conditional GAN          | Mammogram patch + Radiomic vector               | Radiomics-consistent synthetic mammogram patch |
+
 
    
 ### Abstract
