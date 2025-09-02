@@ -165,7 +165,8 @@ As last step, run the following command to
 ```shell
     python main.py --dataset cbis --task train
 ```
-
+#### **OPTION 2: Train the system**
+Using the CSV, dataframes and metadata already in the folder, train the system running the command above.
 
 
 
