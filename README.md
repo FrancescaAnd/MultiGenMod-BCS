@@ -165,8 +165,18 @@ As last step, run the following command to
 ```shell
     python main.py --dataset cbis --task train
 ```
-#### **OPTION 2: Train the system**
-Using the CSV, dataframes and metadata already in the folder, train the system running the command above.
+
+##### **Test the model**
+As last set, run the following command for testing the system on unseen data:
+```shell
+    python main.py --dataset inbreast --task test
+```
+```shell
+    python main.py --dataset cbis --task test
+```
+
+#### **OPTION 2: Train/Test the system**
+Using the CSV, dataframes and metadata already in the folder, train or test the system running the command above.
 
 
 
