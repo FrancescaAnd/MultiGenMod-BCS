@@ -13,10 +13,10 @@ The project explores **multi-view generative models for mammography**, with a fo
 - Ensuring **cross-view consistency** and exploring **lesion-conditioned generation**.  
 - Supporting **data augmentation** and **explainability** in breast cancer screening.
 
-| Stage                          | Model                     | Input                                              | Output                                           |
-|--------------------------------|---------------------------|--------------------------------------------------|-------------------------------------------------|
-| Multi-View Mammogram Generation | GAN                      | Single-view mammogram (CC or MLO) + Radiomic features | Synthetic additional view(s) (e.g., generate MLO from CC) |
-| Radiomics-Conditioned Synthesis | Conditional GAN          | Mammogram patch + Radiomic vector               | Radiomics-consistent synthetic mammogram patch |
+| Stage                          | Model / Approach          | Input                                 | Conditioning / Details                         | Output                                           |
+|--------------------------------|---------------------------|--------------------------------------|-----------------------------------------------|--------------------------------------|
+| Multi-View Mammogram Generation | UNet Generator + PatchGAN Discriminator | Single-view mammogram (CC or MLO)    | GAN conditioned on radiomic features          | Synthetic additional view(s) (e.g., generate MLO from CC) |
+| Radiomics-Conditioned Synthesis | UNet-based Conditional GAN | Mammogram patch + Radiomic vector    | Radiomics injected as additional input channels | Radiomics-consistent mammogram patch           |
 
 
    
